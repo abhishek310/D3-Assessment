@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image Mapper</title>
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <script src="https://d3js.org/d3.v4.js"></script>
+  </head>
+  <body>
+    <div class="Header">
+      <h1>Image Mapper</h1>
+    </div>
+    <div class="Content">
+      <div class="ContentTop">
+        <label for="image-upload" class="custom-image-upload">
+          Upload your image
+        </label>
+        <input
+          id="image-upload"
+          type="file"
+          accept="image/*"
+          onchange="handleFileUpload(this);"
+        />
+      </div>
+      <div class="ContentBottom">
+        <div class="ContentBottom_Right" id="svgContainer">
+          <svg width="100%" height="100%"></svg>
+          <div class="tooltip"></div>
+          <div class="form-popup" id="mapperForm">
+            <form
+              name="descForm"
+              class="form-container"
+              onsubmit="submitForm(event)"
+            >
+              <label for="description"><b>Description</b></label>
+              <input
+                type="text"
+                placeholder="Enter description"
+                name="description"
+                required
+              />
+
+              <button type="submit" class="btn">Save</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">
+                Cancel
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="ContentBottom_Left">
+          <div class="ContentBottom_LeftTop">
+            <table id="ImagePropertiesTable">
+              <tbody id="ImagePropertiesTable_Body"></tbody>
+            </table>
+          </div>
+          <div class="ContentBottom_LeftBottom">
+            <table id="ImageMapperTable">
+              <thead>
+                <tr>
+                  <th>X pos</th>
+                  <th>Y pos</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id="ImageMapperTable_Body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="image-mapper.js"></script>
+  </body>
+</html>

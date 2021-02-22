@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #283747;
+  font-family: calibri;
+  padding: 0 2%;
+}
+#chart {
+  background: #fff;
+  color: #1f2605;
+  height: 100%;
+  width: 100%;
+}
+
+.Header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.Content {
+  height: 90vh;
+}
+
+.ContentTop {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContentBottom {
+  height: 90%;
+  display: flex;
+}
+
+.form-container input[type="text"] {
+  padding: 10px;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type="text"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #932432;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.form-container .btn:hover {
+  opacity: 1;
+}
+
+#lineChart {
+  fill: none;
+  stroke: #3c1874;
+  stroke-width: 1.5;
+}
